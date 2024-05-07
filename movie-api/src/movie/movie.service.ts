@@ -43,7 +43,7 @@ export class MovieService {
       console.log(error.message.message);
     }
   }
-  async deleteMovie(id: number): Promise<Movie | undefined> {
+  async deleteMovie(id: string): Promise<Movie | undefined> {
     const movieToDelete = await this.movieRepository.findOne({
       where: { _id: new mongodb.ObjectId(id) },
     });
@@ -52,7 +52,7 @@ export class MovieService {
       throw new Error(`Movie with ID ${id} not found`);
     }
 
-    await this.movieRepository.delete(id);
+    await this.movieRepository.delete({ _id: new mongodb.ObjectId(id) });
 
     return movieToDelete;
   }
