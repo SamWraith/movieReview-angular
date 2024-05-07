@@ -1,0 +1,50 @@
+form {
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+}
+h2 {
+  margin-top: 125px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+}
+
+button:hover {
+  background-color: #0056b3;
+  scale: calc(1 + 0.018);
+  transition: ease-in-out 0.2s;
+  /* font-family: "Roboto Mono", monospace; */
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,47 @@
+<!-- <h2>{{ movie?.title }}</h2>
+<p>Release Year: {{ movie?.releaseYear }}</p>
+<p>Genre: {{ movie?.genre }}</p>
+
+<h3>Reviews</h3> -->
+
+<!-- <form>
+  <label for="review">Write a Review:</label><br>
+  <textarea id="review" name="review" [(ngModel)]="newReview" rows="4" cols="50"></textarea><br>
+  <button type="submit" (click)="submitReview()">Submit Review</button>
+</form> -->
+<div class="movie-details">
+  <h2 class="movie-title">{{ movie?.title }}</h2>
+  <p class="release-year">Release Year: {{ movie?.releaseYear }}</p>
+  <p class="genre">Genre: {{ movie?.genre }}</p>
+
+  <!-- <h3 class="reviews-header">Reviews</h3> -->
+</div>
+<!-- <ul>
+  <li *ngFor="let review of reviews">{{ review }}</li>
+</ul> -->
+
+<form class="review-form">
+  <label for="review" class="review-label">Write a Review:</label><br />
+  <textarea
+    id="review"
+    name="review"
+    [(ngModel)]="newReview"
+    rows="4"
+    cols="50"
+    class="review-textarea"
+  ></textarea
+  ><br />
+  <button type="submit" (click)="submitReview()" class="submit-button">
+    Submit Review
+  </button>
+</form>
+
+<div *ngIf="reviewsList.length > 0" class="review-card">
+  <div class="review-box">
+    <h3>Reviews</h3>
+    <div *ngFor="let reviewData of reviewsList" class="review">
+      <p>{{ reviewData.review }}</p>
+      <hr />
+    </div>
+  </div>
+</div>
